@@ -1,0 +1,91 @@
+:root {
+  --text: #1c1f23;
+  --muted: #5b6470;
+  --bg: #ffffff;
+  --soft: #f4f6f8;
+  --line: #e2e6ea;
+  --accent: #1f5f8b;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+header.top {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 16px 0 0;
+  font-size: 15px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid var(--soft);
+}
+
+h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 6px; }
+
+.subtitle { color: var(--accent); font-weight: 600; margin: 0 0 14px; }
+
+.hero p { margin: 0 0 10px; }
+
+section { padding: 32px 0; border-bottom: 1px solid var(--line); }
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 18px;
+  padding-left: 12px;
+  border-left: 4px solid var(--accent);
+}
+
+h3 { font-size: 1rem; margin: 24px 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+
+.entry { margin-bottom: 18px; }
+.entry .when { color: var(--muted); font-size: 15px; }
+.entry .what { font-weight: 600; }
+.entry ul { margin: 4px 0 0; padding-left: 20px; }
+
+.topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.topic { background: var(--soft); border-radius: 8px; padding: 16px; }
+.topic strong { display: block; margin-bottom: 6px; }
+.topic p { margin: 0; font-size: 15px; color: var(--muted); }
+
+.contact { list-style: none; padding: 0; margin: 0; }
+.contact li { margin-bottom: 8px; }
+
+footer { padding: 24px 0 40px; font-size: 14px; color: var(--muted); }
+footer a { color: var(--muted); }
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .hero { flex-direction: column; text-align: center; gap: 20px; padding-top: 16px; }
+  .hero img { width: 150px; height: 150px; }
+  h1 { font-size: 1.8rem; }
+}
